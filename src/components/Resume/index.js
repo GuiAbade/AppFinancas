@@ -7,12 +7,12 @@ import * as C from './styles';
     FaDollarSign,
   } from 'react-icons/fa';
 
-const Resume = () => {
+const Resume = ({income, expense, total}) => {
   return (
     <C.Container>
-      <ResumeItem title="Entradas" Icon={FaAngleUp} value="1000" />
-      <ResumeItem title="Saídas" Icon={FaAngleDown} value="1000" />
-      <ResumeItem title="Total" Icon={FaDollarSign} value="1000" />
+      <ResumeItem title="Entradas" Icon={FaAngleUp} value={income} />
+      <ResumeItem title="Saídas" Icon={FaAngleDown} value={expense} />
+      <ResumeItem title="Total" Icon={FaDollarSign} value={total} />
     </C.Container>
   );
 };
